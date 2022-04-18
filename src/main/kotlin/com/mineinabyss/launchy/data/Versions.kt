@@ -25,7 +25,7 @@ data class Versions(
         .associateBy { it.name }
 
     companion object {
-        const val VERSIONS_URL = "https://raw.githubusercontent.com/MineInAbyss/launchy/master/versions.yml"
+        const val VERSIONS_URL = "https://raw.githubusercontent.com/HibiscusMC/launchy/master/versions.yml"
 
         suspend fun readLatest(download: Boolean): Versions = withContext(Dispatchers.IO) {
             if (download) Downloader.download(VERSIONS_URL, Dirs.versionsFile)
