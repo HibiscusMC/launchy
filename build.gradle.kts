@@ -54,7 +54,7 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.freeCompilerArgs = listOf("-opt-in=androidx.compose.material3.ExperimentalMaterial3Api")
 }
 
-val appName = "MineInAbyss_Launcher-" + when {
+val appName = "HibiscusMC-Launcher_" + when {
     Os.isFamily(Os.FAMILY_MAC) -> "macOS"
     Os.isFamily(Os.FAMILY_WINDOWS) -> "windows"
     else -> "linux"
@@ -89,7 +89,7 @@ compose.desktop {
     }
 }
 
-val linuxAppDir = project.file("packaging/appimage/Mine in Abyss.AppDir")
+val linuxAppDir = project.file("packaging/appimage/HibiscusMC.AppDir")
 val appImageTool = project.file("deps/appimagetool.AppImage")
 val composePackageDir = "$buildDir/compose/binaries/main/${
     when {
